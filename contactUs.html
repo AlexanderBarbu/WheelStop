@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF8">
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Panagiota Bougioukou (3160255), Alexandros Barbu (3200284)">
         <title>About Us</title>
     </head>
 
@@ -13,28 +14,43 @@
             </a>
             <nav>
                  <ul class="nav">
-                      <li><a href="index.html">Home page</a></li>
-                      <li><a href="shop.html">Shop</a></li>
-                         <div class='dropdown'>
+                    <li><a href="index.html">Home page</a></li>
+                    <li><a href="services.html">Services</a></li>
+                        <div class='dropdown'>
                              <div class='dropdown-content'>
                                  <ul>
-                                     <li><a href="shopCar.html">Car</a></li>
-                                     <li><a href="shopMotorcycle.html">Motorcycle</a></li>
+                                     <li><a href="shopCar.html">Shop Car</a></li>
+                                     <li><a href="shopMotorcycle.html">Shop Motorcycle</a></li>
+                                     <li><a href="rentalCar.html">Rent Car</a></li>
+                                     <li><a href="rentalMotorcycle.html">Rent Motorcycle</a></li>
                                  </ul>
                              </div>
-                         </div>
-                      <li><a href="rental.html">Rental</a></li>
-                         <div class='dropdown'>
-                             <div class='dropdown-content'>
-                                 <ul>
-                                     <li><a href="rentalCar.html">Car</a></li>
-                                     <li><a href="rentalMotorcycle.html">Motorcycle</a></li>
-                                 </ul>
-                             </div>
-                         </div>
-                     <li><a href="aboutUs.html">About Us</a></li>
+                        </div>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="#" class="active">Contact Us</a></li>
                  </ul>
             </nav>
        </header>
+
+       <form>
+          <label for="fname">First & Last Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+          <label for="email">E-mail:</label><br>
+            <input type="text" id="email" name="email"><br>
+          <label for="tele">Telephone:</label><br>
+            <input type="text" id="tele" name="tele"><br>
+          <label for="pcode">Product Code:</label><br>
+            <input type="text" id="pcode" name="pcode"><br>
+          <label for="desc">Problem Description:</label><br>
+            <input type="text" id="desc" name="desc"><br> 
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+
+    <footer>
+            <p>&copy; Μπάρμπου Αλέξανδρος (3200284) - Γιώτα Μπουγιούκου (3160255). All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
     </body>
 </html>
