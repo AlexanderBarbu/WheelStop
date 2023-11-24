@@ -11,6 +11,23 @@
     text-align: center;
     padding-bottom: 25px;
 }
+
+a:link { /* unvisited link*/
+    color:blue;
+}
+
+a:visited { /* visited link*/
+    color:red;
+}
+
+a:active { /* current link*/
+    color: purple;
+}
+
+a:hover{
+    background: var(color(#373f66));
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -41,6 +58,14 @@ li,a,button{
 .nav li a:hover{
     color:#067b00
 }
+.ul{
+    color: #ecf0f1; 
+    display: inline-block;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Montserrat",sans-serif;
+}
 button{
     padding: 9px 25px;
     background-color: rgba(215, 120, 85, 1);
@@ -49,7 +74,7 @@ button{
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
-.grid-container{
+/* .grid-container{
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3,250px);
@@ -59,7 +84,7 @@ button{
 }
 .grid-item{
     margin: 30px;
-}
+} */
 .thebox{
     background-color: #3d3f46;
     padding: 20px 100px;
@@ -76,7 +101,7 @@ button{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
-    justify-content: center space-between;
+    justify-content: center ;
 }
 .dropdown:hover .dropdown-content {
     display: flex;
@@ -119,27 +144,27 @@ table, th, td {
     font-size: 16px;
     font-family: "Montserrat",sans-serif;
 }
-.product-container{
+/* .product-container{
     display: grid;
     justify-content: center, space-between;
     grid-template-columns: repeat(4,250px);
-    grid-auto-rows: (minmax(150px,auto));
+    grid-auto-rows: (minmax(100,auto));
     grid-gap: 20px 200px;
     padding-bottom: 120px;
     text-align: center;
-}
+} */
 .flex{
     display: grid;
     text-align: center;
     grid-template-columns: repeat(2,450px);
-    grid-auto-rows: (minmax(150px,auto));
+    /* grid-auto-rows: (minmax(150,auto)); */
     justify-content: center;
 }
-#gphotos{
+/* #gphotos{
     display: grid;
     grid-template-columns: 650px;
-    grid-auto-rows: (minmax(150px,auto));
-}
+    grid-auto-rows: (minmax(100,auto));
+} */
 #specsheet{
     border: 1px solid #067b00;
     border-collapse: collapse;
