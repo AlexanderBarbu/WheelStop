@@ -28,9 +28,7 @@ body{ /* Body related modifications */
     overflow-x:
      hidden;
 }
-.wrapper{  
-    display: grid;
-}
+
 .container {
     width: 100%;
     height: fit-content;
