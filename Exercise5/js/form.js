@@ -1,11 +1,16 @@
- /*var pmethod = document.getElementByName('pmethod');
+ function EnableDisableTextBox(e) {
 
-  var cid = document.getElementByName('cid');
+   var checkid = e.id;
+   var cidInput = document.getElementById('cid');
+   cidInput.disabled = false;
 
-  pmethod.onclick = function(){
-  if (cid.disabled==false) {
-    cid.disabled == true}
-  }*/
+   if (checkid == 'cash') {
+
+     cidInput.disabled = true;
+   } else {
+     cidInput.disabled = false;
+   }
+ }
 
  function EnableDisableTextBox(e) {
 
@@ -22,31 +27,6 @@
      cidInput.disabled = false;
    }
  }
- /*var pmethod = document.getElementByName('pmethod');
-
- var cid = document.getElementByName('cid');
-
- pmethod.onclick = function(){
- if (cid.disabled==false) {
-   cid.disabled == true}
- }*/
-
- function EnableDisableTextBox(e) {
-
-
-   var checkid = e.id;
-   //alert("Hello! I am an alert box!!" + checkid);
-   var cidInput = document.getElementById('cid');
-   cidInput.disabled = false;
-
-   if (checkid == 'cash') {
-
-     cidInput.disabled = true;
-   } else {
-     cidInput.disabled = false;
-   }
- }
-
 
  //Gia th forma
 
@@ -105,23 +85,7 @@ pass2.addEventListener("input", (event) => {
   }
 });
 
- /*form.addEventListener("submit", (event) => {
-   if (!email.validity.valid) {
-     email.setCustomValidity("You need to provide a valid email address!");
-   } else {
-     email.setCustomValidit("");
-   }
- })*/
-
-
-
  form.onsubmit = function() {
-
-   /*if (elem.user1.value != elem.user2.value) {
-     alert('the usernames should match!');
-     elem.user1.focus();
-     return 0;
-   }*/
 
    if (elem.pass1.value != elem.pass2.value) {
      alert('the passwords should match!');
@@ -130,11 +94,7 @@ pass2.addEventListener("input", (event) => {
      elem.pass1.focus();
      return 0;
    }
-
-
-
    var data = new FormData(form);
    console.log(data);
-   //console.log('I tried');
 
  }
