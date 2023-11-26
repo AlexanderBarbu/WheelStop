@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Panagiota Bougioukou (3160255), Alexandros Barbu (3200284)">
         <link href="css/style.css" rel="stylesheet">
-        <title>Services | WheelStop</title>
+        <title>About Us | WheelStop</title>
     </head>
 
     <body>
-        <div class = "wrapper">
+        <div class="wrapper">
+            <!-- Header bar -->
             <header class="container">
                 <nav class="nav">
                     <!-- Webpage icon -->
@@ -22,7 +23,7 @@
                         <ul>
                             <li><a href="index.html">Home page</a></li>
                             <li class='dropdown'>
-                                <a href="#" class="active">Services</a>
+                                <a href="services.html">Services</a>
                                 <div class='dropdown-content'>
                                     <ul>
                                         <li><a href="shopCar.html">Shop Car</a></li>
@@ -32,44 +33,58 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="#" class="active">About Us</a></li>
                             <li><a href="contactUs.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
 
-            <main class="container">
+            <main class = "container">
+                <!-- First Page Segment -->
+                <section class = "about" >
 
-                <section class="header">
-                    <h2>Choose your preference</h2>
+                    <!-- Left side - Text and Contact Information -->
+                    <div class = "info">
+                        <p>About Alexander: Alexander Barbu is a student in Athens University of Economics and Business as well as a junior developer at Mellon Technologies. He grew up in Paros, Greece and aims to become a DevOps developer, one day.</p>
+                        <ul>
+                            <li><strong>Contact Information:</strong></li>
+                            <li>Facebook: <a href="https://www.facebook.com/Mr.Mc.Wave/">Alexander Barbu</a></li>
+                            <li>GitHub: <a href="https://github.com/AlexanderBarbu">Alexander Barbu</a></li>
+                            <li>Email: <a href="mailto:p3200284@aueb.gr">p3200284@aueb.gr</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right side - Picture and Name -->
+                    <div class="picname">
+                        <img src="img/Alex.png" alt="Profile Picture 1">
+                        <p>Alexander Barbu</p>
+                    </div>
+
                 </section>
 
-                <section class="banner">
-                    <div class="banner-left">
-                        <div class='dropdown'>
-                            <img class ="banner-img" src="img/shopSign.png" style="max-width: 70%; height: auto;" alt="shopSign">
-                            <div class='dropdown-content'>
-                                <ul>
-                                    <li><a href="shopCar.html">Shop Car</a></li>
-                                    <li><a href="shopMotorcycle.html">Shop Motorcycle</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                <!-- Second Page Segment -->
+                <section class = "about" >
+
+                    <!-- Left side - Text and Contact Information -->
+                    <div class = "info">
+                        <p>About Panagiota: Panagiota Bougioukou is a student in Athens University of Economics and Business as well as a junior software engineer at UniSystems. She grew up in Athens, Greece and aims to become a UI/UX developer, one day.</p>
+                        <ul>
+                            <li><strong>Contact Information:</strong></li>
+                            <li>Facebook: <a href="https://www.facebook.com/bouyioukou/">Yiota Bouyioukou</a></li>
+                            <li>GitHub: <a href="https://github.com/ybouyioukou">Yiota Bouyioukou</a></li>
+                            <li>Email: <a href="mailto:p3160255@aueb.gr">p3160255@aueb.gr</a></li>
+                        </ul>
                     </div>
-                    <div class="banner-right">
-                        <div class='dropdown'>
-                            <img class ="banner-img" src="img/rentSign.png" style="max-width: 70%; height: auto;" alt="rentSign">
-                            <div class='dropdown-content'>
-                                <ul>
-                                    <li><a href="rentalCar.html">Rent Car</a></li>
-                                    <li><a href="rentalMotorcycle.html">Rent Motorcycle</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
+                    <!-- Right side - Picture and Name -->
+                    <div class="picname">
+                        <img src="img/yb.jpg" alt="ProfilePicture2">
+                        <p>Panagiota Bouyioukou</p>
                     </div>
+
                 </section>
-            
+
             </main>
 
             <footer>
@@ -81,10 +96,9 @@
                         <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" width="10%" height=auto alt="Instagram"></a></li>         
                     </ul>
                 </div>
-
                 <p>&copy; Μπάρμπου Αλέξανδρος (3200284) - Γιώτα Μπουγιούκου (3160255). All Rights Reserved.</p>
-                
             </footer>
+
         </div>
     </body>
 </html>

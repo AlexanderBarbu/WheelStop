@@ -55,9 +55,11 @@
                         στο menu που βρίσκεται στην αρχή της σελίδας.</p>
                 </section>
 
-                <div>
-                    <img class = "warning-banner" src="img\warning.png" style="max-width: 90%; height: auto;" alt="warning">
-                </div>
+                <picture class ="warning-banner">
+                    <source media="(max-width: 768px)" srcset="img\warning-medium.png">
+                    <source media="(max-width: 600px)" srcset="img\warning-small.png">
+                    <img class = "warning-banner" src="img\warning.png" alt="warning">
+                </picture>
                 
                 <article class="safe-guide">
                     <div>

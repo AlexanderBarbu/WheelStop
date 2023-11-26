@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Panagiota Bougioukou (3160255), Alexandros Barbu (3200284)">
         <link href="css/style.css" rel="stylesheet">
-        <title>Services | WheelStop</title>
+        <title>Contact Us | WheelStop</title>
     </head>
 
     <body>
-        <div class = "wrapper">
+        <div class="wrapper">
+            <!-- Header bar -->
             <header class="container">
                 <nav class="nav">
                     <!-- Webpage icon -->
@@ -22,7 +23,7 @@
                         <ul>
                             <li><a href="index.html">Home page</a></li>
                             <li class='dropdown'>
-                                <a href="#" class="active">Services</a>
+                                <a href="services.html">Services</a>
                                 <div class='dropdown-content'>
                                     <ul>
                                         <li><a href="shopCar.html">Shop Car</a></li>
@@ -33,43 +34,42 @@
                                 </div>
                             </li>
                             <li><a href="aboutUs.html">About Us</a></li>
-                            <li><a href="contactUs.html">Contact Us</a></li>
+                            <li><a href="#" class="active">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
 
-            <main class="container">
+            <main class = "container">
+                <form class="contact-form" action="/process_form" method="post">
 
-                <section class="header">
-                    <h2>Choose your preference</h2>
-                </section>
+                    <!-- User information -->
+                    <fieldset class="user-info">
+                        <legend>Contact Information</legend>
 
-                <section class="banner">
-                    <div class="banner-left">
-                        <div class='dropdown'>
-                            <img class ="banner-img" src="img/shopSign.png" style="max-width: 70%; height: auto;" alt="shopSign">
-                            <div class='dropdown-content'>
-                                <ul>
-                                    <li><a href="shopCar.html">Shop Car</a></li>
-                                    <li><a href="shopMotorcycle.html">Shop Motorcycle</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-right">
-                        <div class='dropdown'>
-                            <img class ="banner-img" src="img/rentSign.png" style="max-width: 70%; height: auto;" alt="rentSign">
-                            <div class='dropdown-content'>
-                                <ul>
-                                    <li><a href="rentalCar.html">Rent Car</a></li>
-                                    <li><a href="rentalMotorcycle.html">Rent Motorcycle</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="first-name-form" required>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="last-name-form" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email-form" required>
+
+                        <label for="tel"> Phone : </label>
+                        <input type="tel" id="tel" name="telephone-form" placeholder="123-456-7890" size="10"><br>
+
+                        <label for="pcode">Product Code:</label>
+                        <input type="text" id="pcode" name="pcode"><br><br>
+                            
+                        <label for="desc">Problem Description:</label>
+                        <input type="text" id="desc" name="desc">
+
+                        <button class="user-submit">
+                            <input type="submit" value="Submit">
+                        </button>
+                    </fieldset>
+                </form>
             </main>
 
             <footer>
@@ -81,10 +81,9 @@
                         <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" width="10%" height=auto alt="Instagram"></a></li>         
                     </ul>
                 </div>
-
                 <p>&copy; Μπάρμπου Αλέξανδρος (3200284) - Γιώτα Μπουγιούκου (3160255). All Rights Reserved.</p>
-                
             </footer>
+
         </div>
     </body>
 </html>

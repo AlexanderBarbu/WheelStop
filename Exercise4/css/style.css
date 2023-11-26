@@ -25,8 +25,7 @@ body{ /* Body related modifications */
     align-items: center;
     padding: 30px 10%;              
     background-color: color(var(--background-color));
-    overflow-x:
-     hidden;
+    overflow-x: hidden;
 }
 .wrapper{  
     display: grid;
@@ -328,6 +327,7 @@ button:hover {
     justify-content: space-around;
     align-items: center;
 }
+
 p{
     font-style: italic;
     margin-bottom: 0;
@@ -397,10 +397,10 @@ table, th, td {
     justify-content: center;
 }
 
-.warning-banner { 
+.warning-banner {
     display: flex;
     align-items: center;
-    margin: 3em;
+    margin: 1em;
 }
 
 input[type=submit] {
@@ -481,4 +481,213 @@ img{
 p{
     font-weight: bold; 
     margin-top: 10px;
+}
+
+
+/* Large devices */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+    .page-icon {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .warning-banner {
+        width: 185%;
+    }
+
+    .page-menu {
+        width: 35%;
+    }
+
+    .social ul { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .banner-left h2 {
+        margin: 2%;
+        font-size: 1rem;
+    }
+
+    .banner .banner-left p {
+        margin: 2% 2% 8% 2%;
+        font-size: 0.7rem;
+    }
+
+    .about-header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-header img {
+        width: 100%;
+        border-radius: 2%;
+    } 
+
+    .contact-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}
+
+/* Medium devices */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .page-icon {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-menu {
+        width: 80%;
+    }
+
+    .warning-banner {
+        width: 170%;
+    }
+
+    .social ul { /* footer should be vertical in smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .banner .banner-left h2 {
+        margin: 2%;
+        font-size: 1rem;
+    }
+
+    .banner .banner-left p {
+        margin: 2% 2% 8% 2%;
+        font-size: 1rem;
+    }
+
+    .banner img{
+        width: 80%;
+    }
+
+   .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .about-header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-header img {
+        width: 45%;
+        border-radius: 2%;
+    } 
+
+    .contact-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .page-icon {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-menu {
+        width: 80%;
+    }
+    
+    .warning-banner {
+        width: 120%;
+    }
+
+    .social ul { /* footer should be vertical in smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .banner .banner-left h2 {
+        margin: 2%;
+        font-size: 1.5rem;
+    }
+
+    .banner .banner-left p {
+        margin: 2% 2% 8% 2%;
+        font-size: 1rem;
+    }
+
+    .banner img{
+        width: 60%;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-header img {
+        width: 50%;
+        border-radius: 2%;
+    }
+
+    #form-wrapper{
+        display: grid;
+
+    }
+
+    .main-container{
+        display: grid;
+        grid-auto-rows: minmax(200px, auto);
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .contact-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
