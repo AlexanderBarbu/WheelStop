@@ -46,7 +46,7 @@ body{ /* Body related modifications */
     color:var(--light-green);
 }
 
-nav a.active { /* current link*/
+.nav a.active { /* current link*/
     color: var(--white);
     font-weight: bold;
     text-decoration: underline;
