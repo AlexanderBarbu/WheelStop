@@ -1,41 +1,9 @@
- function EnableDisableTextBox(e) {
+var form = document.forms.registerForm;
+var elem = form.elements;
 
-   var checkid = e.id;
-   var cidInput = document.getElementById('cid');
-   cidInput.disabled = false;
-
-   if (checkid == 'cash') {
-
-     cidInput.disabled = true;
-   } else {
-     cidInput.disabled = false;
-   }
- }
-
- function EnableDisableTextBox(e) {
-
-
-   var checkid = e.id;
-   //alert("Hello! I am an alert box!!" + checkid);
-   var cidInput = document.getElementById('cid');
-   cidInput.disabled = false;
-
-   if (checkid == 'cash') {
-
-     cidInput.disabled = true;
-   } else {
-     cidInput.disabled = false;
-   }
- }
-
- //Gia th forma
-
- var form = document.forms.registerForm;
-  var elem = form.elements;
-
- form.addEventListener('submit', function(e) {
-   e.preventDefault();
- });
+form.addEventListener('submit', function(e) {
+ e.preventDefault();
+});
 
 const email = document.getElementById("email");
 const user1 = document.getElementById("user1");
@@ -43,22 +11,22 @@ const user2 = document.getElementById("user2");
 const pass1 = document.getElementById("pass1");
 const pass2 = document.getElementById("pass2");
 
- email.addEventListener("input", (event) => {
-   if (email.validity.typeMismatch) {
-     email.setCustomValidity("You need to input a valid email address!");
-     email.reportValidity();
-   } else {
-     email.setCustomValidity("");
-   }
+email.addEventListener("input", (event) => {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("You need to input a valid email address!");
+    email.reportValidity();
+  } else {
+    email.setCustomValidity("");
+  }
  });
  
  user2.addEventListener("input", (event) => {
-   if (user1.value != user2.value) {
-     user2.setCustomValidity("The usernames must match!");
-     user2.reportValidity();
-   } else {
-     user2.setCustomValidity("");
-   }
+  if (user1.value != user2.value) {
+    user2.setCustomValidity("The usernames must match!");
+    user2.reportValidity();
+  } else {
+    user2.setCustomValidity("");
+  }
  });
 
  pass1.addEventListener("input", (event) => {
@@ -85,16 +53,16 @@ pass2.addEventListener("input", (event) => {
   }
 });
 
- form.onsubmit = function() {
+form.onsubmit = function() {
 
-   if (elem.pass1.value != elem.pass2.value) {
-     alert('the passwords should match!');
-     elem.pass1.value="";
-     elem.pass2.value="";
-     elem.pass1.focus();
-     return 0;
+  if (elem.pass1.value != elem.pass2.value) {
+    alert('the passwords should match!');
+    elem.pass1.value="";
+    elem.pass2.value="";
+    elem.pass1.focus();
+    return 0;
    }
-   var data = new FormData(form);
-   console.log(data);
+  var data = new FormData(form);
+  console.log(data);
 
- }
+}

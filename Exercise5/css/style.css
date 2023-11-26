@@ -9,7 +9,8 @@
     --dark-green: rgb(43, 89, 57);
 }
 
-*{ /* General modifications */
+/* General modifications */
+*{ 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -21,15 +22,14 @@
     
 }
 
-body{ /* Body related modifications */
+/* Body related modifications */
+body {
     align-items: center;
     padding: 30px 10%;              
     background-color: color(var(--background-color));
     overflow-x: hidden;
 }
-.wrapper{  
-    display: grid;
-}
+
 .container {
     width: 100%;
     height: fit-content;
@@ -38,6 +38,55 @@ body{ /* Body related modifications */
     align-items: stretch;
 }
 
+.wrapper {  
+    display: grid;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1em 1em;
+    box-sizing: border-box;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    background-color: var(--white-inputs);
+    resize: none;
+}
+
+/* Header related modifications */
+.header {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10%;   
+    text-align: center;   
+    padding-bottom: 2em;   
+}
+
+h2 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;     
+}
+
+li, a {   
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.headers {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* Navigation bar modifications*/
 .nav a { /* unvisited link*/
     color:var(--blue-birds);
 }
@@ -57,11 +106,70 @@ body{ /* Body related modifications */
     cursor: pointer;
 }
 
-a:hover{
+.nav {
+    width: 100%;
+    list-style: none;
+    top: 0;
+    justify-content: space-around;
+    height: 150px;
+    display: flex;
+    z-index: 1;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 0px 8px;
+    height: fit-content;
+}
+
+.nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+/* Hover in hyperlinks*/
+a:hover {
     color: var(--black);
     cursor: pointer;
 }
 
+/* Menu modifications*/
+.logo {
+    cursor: pointer;
+}
+
+.page-menu {
+    width: 30%;
+}
+
+.page-menu ul { /* the menu should be horizontal */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+.page-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+}
+
+.page-menu a {
+    color: var(color black);
+    text-decoration: none;
+}
+    
+.page-icon {
+    float: left;
+    width: 25%;
+    margin: 1% 0;
+}
+
+/* Safe Guide modifications*/
 .safe-guide {
     max-width: 1000px;
     margin: 0 auto;
@@ -92,119 +200,35 @@ details p {
     margin:5px;
 }
 
-.header{/* header related modifications */
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10%;   
-    text-align: center;   
-    padding-bottom: 2em;    
-    margin: 30px;    
-}
-
-h2{
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;     
-}
-
-li,a{   /*,button{ */
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.logo{
-    cursor: pointer;
-}
-
-.nav {
-    width: 100%;
-    list-style: none;
-    top: 0;
-    justify-content: space-around;
-    height: 150px;
-    display: flex;
-    z-index: 1;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.nav li {
-    display: inline-block;
-    padding: 0px 5px;
-    height: fit-content;
-}
-
-.nav li a{
-    transition: all 0.3s ease 0s;
-}
-
-.page-menu {
-    width: 30%;
-}
-
-.page-menu ul { /* the menu should be horizontal */
-    display: flex;
-    justify-content: space-around;
-    padding-top: 7%;
-}
-
-.page-menu li {
-    list-style: none;
-    margin: 0;
-    padding: 1px;
-}
-
-.page-menu a {
-    color: var(color black);
-    text-decoration: none;
-}
-    
-.page-icon{
-    float: left;
-    width: 25%;
-    margin: 1% 0;
-}
-
-a.active {
-    text-decoration: underline;
-}
-
-.ad{
+/* Ads modifications*/
+.ad {
     display: flex; flex-wrap: wrap;
 }
 
-.ad-format{
+.ad-format {
     flex: 0 0 33.33%; 
     box-sizing: border-box; 
     padding: 10px; 
     text-align: center;
 }
 
-img{
+img {
     max-width: 100%; 
     height: auto;
 }
 
-p{
+p {
     font-weight: bold; 
     font-size: smaller;  
 }
 
-ul{
+ul {
     text-align: left; 
     margin-top: 5px;
 }
 
-.ul{
-    color: #ecf0f1; 
+.ul {
+    color: var(--white); 
     display: inline-block;
     align-items: center;
     font-weight: 500;
@@ -217,11 +241,13 @@ button:hover {
     cursor: pointer;
 }
 
+/* Drop Down menu modifications*/
 .dropdown {
     position: relative;
     display: inline-block;
 }
- .dropdown-content {
+
+.dropdown-content {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -251,6 +277,7 @@ button:hover {
     padding: 5px;
 }
 
+/* Services specifications*/
 .banner-left {
     width: 100%;
     display: flex;
@@ -273,28 +300,21 @@ button:hover {
     margin-bottom: 7%;
 }
 
-#form-about{
-    height: 50vh;
-    font-weight: 900;
-    grid-column-start:1;
-    grid-column-end: 3;
-    
-}
-
-.contact-form{
+/* Contact Us Modifications*/
+.contact-form {
     margin:10%;
     grid-column-start: 1;
     grid-column-end: 2;
     display: flex;
     flex-direction: column;
     flex-flow: column wrap;
-    
 }
 
-.contact-form input{
-    background: var(color #ecf0f1);
+.contact-form input {
+    background: var(--background-color);
 }
 
+/* Input specifics */
 .contact-form input[type=text] , .contact-form input[type=email] {
     width: 100%;
     border: 2px solid;
@@ -316,6 +336,7 @@ button:hover {
     margin-bottom: 1%;
 }
 
+/* Footer modifications*/
 .footer{
     width: 100%;
     color: var(--white);
@@ -331,14 +352,30 @@ p{
     margin-bottom: 0;
 }
 
-.headers{
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-weight: 900;
-    font-size: 30px;
+/* Social media modifications*/
+.social {
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    margin-top: 3em;
+}
+
+.social ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.social li {
+    list-style: none;
+}
+
+.social a {
+    text-decoration: none;
 }  
 
+/*Product page modifications*/
 .car-details {
     text-align: center;
     padding-top: 50px;
@@ -383,24 +420,20 @@ table, th, td {
     font-size: 13px;
 }
 
+/* Index main text modification*/
 .maintxt {
     font-size: 16px;
 }
 
-
-.flex {
-    display: grid;
-    text-align: center;
-    grid-template-columns: repeat(2,450px);
-    justify-content: center;
-}
-
+/* Index warning banner modification*/
 .warning-banner {
     display: flex;
     align-items: center;
     margin: 1em;
+    width: 185%;
 }
 
+/* Sumbit button */
 input[type=submit] {
     background-color: var(--darker-grey);
     border: 2px;
@@ -409,44 +442,8 @@ input[type=submit] {
     margin: 4px 2px;
     cursor: pointer;
 }
-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 1em 1em;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: var(--white-inputs);
-    resize: none;
-}
 
-.social {
-    width: 100%;
-    height: fit-content;
-    justify-content: space-around;
-    margin-bottom: 1em;
-    margin-top: 3em;
-}
-
-.social ul {
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-.social li {
-    list-style: none;
-}
-
-.social a {
-    text-decoration: none;
-}
-
-input[type=radio]{
-    padding: 1em 1em;
-    margin-left: 5%;
-}
-
+/* About Us modifications */
 .about{
     display: flex; 
     margin-bottom: 20px;
@@ -481,7 +478,14 @@ p{
     margin-top: 10px;
 }
 
+/* Questionnaire bullets */
+input[type=radio]{
+    padding: 1em 1em;
+    margin-left: 5%;
+    cursor: pointer;
+}
 
+/* Media Queries*/
 /* Large devices */
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
     .page-icon {
@@ -690,7 +694,7 @@ p{
     }
 }
 
-/* FORM CSS */
+/* Form modifications */
 .pure-button {
     /* Structure */
     line-height: normal;
@@ -706,11 +710,11 @@ p{
     justify-content: flex;
 }
 
-    /* Firefox: Get rid of the inner focus border */
-    .pure-button::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
 
 /* Inherit .pure-g styles */
 .pure-button-group {
@@ -723,83 +727,74 @@ p{
     word-spacing: -0.43em;
 }
 
-    .pure-button-group .pure-button {
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
-    }
+.pure-button-group .pure-button {
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
 
 .pure-button {
     font-family: inherit;
     font-size: 100%;
     padding: 0.5em 1em;
-    color: rgba(0, 0, 0, 0.80);
-    border: none rgba(0, 0, 0, 0);
-    background-color: #E6E6E6;
+    color: var(--black);
+    border: none var(--black);
+    background-color: var(--white);
     text-decoration: none;
     border-radius: 2px;
 }
 
-    .pure-button-hover,
-    .pure-button:hover,
-    .pure-button:focus {
-        background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-    }
+.pure-button-hover, .pure-button:hover, .pure-button:focus {
+    background-image: linear-gradient(transparent, var(--black) 40%, var(--black));
+}
 
-    .pure-button:focus {
-        outline: 0;
-    }
+.pure-button:focus {
+    outline: 0;
+}
 
-    .pure-button-active,
-    .pure-button:active {
-        box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-        border-color: #000;
-    }
+.pure-button-active, .pure-button:active {
+    box-shadow: 0 0 0 1px var(--black) inset, 0 0 6px var(--black) inset;
+    border-color: var(--black);
+}
 
-    .pure-button[disabled],
-    .pure-button-disabled,
-    .pure-button-disabled:hover,
-    .pure-button-disabled:focus,
-    .pure-button-disabled:active {
-        border: none;
-        background-image: none;
-        opacity: 0.40;
-        cursor: not-allowed;
-        box-shadow: none;
-        pointer-events: none;
-    }
+.pure-button[disabled], .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active {
+    border: none;
+    background-image: none;
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
 
 .pure-button-hidden {
     display: none;
 }
 
-.pure-button-primary,
-.pure-button-selected,
-a.pure-button-primary,
-a.pure-button-selected {
-    background-color: rgb(0, 120, 231);
-    color: #fff;
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+    background-color: var(--blue-birds);
+    color:var(--white);
 }
 
 /* Button Groups */
 .pure-button-group .pure-button {
     margin: 0;
     border-radius: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid var(--black);
 }
 
-    .pure-button-group .pure-button:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-    }
+.pure-button-group .pure-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
 
-    .pure-button-group .pure-button:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        border-right: none;
-    }
+.pure-button-group .pure-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}
 
+/* Form inputs specifications */
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -814,12 +809,11 @@ a.pure-button-selected {
 .pure-form input[type="search"],
 .pure-form input[type="tel"],
 .pure-form input[type="color"],
-.pure-form select,
-.pure-form textarea {
+.pure-form select, .pure-form textarea {
     padding: 0.5em 0.6em;
     display: inline-block;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    border: 1px solid var(--white);
+    box-shadow: inset 0 1px 3px var(--white);
     border-radius: 4px;
     vertical-align: middle;
     box-sizing: border-box;
@@ -834,11 +828,10 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    box-shadow: inset 0 1px 3px var(--white);
     border-radius: 4px;
     box-sizing: border-box;
 }
-
 
 /* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
 /* May be able to remove this tweak as color inputs become more standardized across browsers. */
@@ -846,26 +839,24 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0.2em 0.5em;
 }
 
-
-    .pure-form input[type="text"]:focus,
-    .pure-form input[type="password"]:focus,
-    .pure-form input[type="email"]:focus,
-    .pure-form input[type="url"]:focus,
-    .pure-form input[type="date"]:focus,
-    .pure-form input[type="month"]:focus,
-    .pure-form input[type="time"]:focus,
-    .pure-form input[type="datetime"]:focus,
-    .pure-form input[type="datetime-local"]:focus,
-    .pure-form input[type="week"]:focus,
-    .pure-form input[type="number"]:focus,
-    .pure-form input[type="search"]:focus,
-    .pure-form input[type="tel"]:focus,
-    .pure-form input[type="color"]:focus,
-    .pure-form select:focus,
-    .pure-form textarea:focus {
-        outline: 0;
-        border-color: #129FEA;
-    }
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus, .pure-form textarea:focus {
+    outline: 0;
+    border-color: var(--blue-birds);
+}
 
 /*
 Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
@@ -873,14 +864,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type]):focus {
     outline: 0;
-    border-color: #129FEA;
+    border-color: var(--blue-birds);
 }
 
 .pure-form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
-    outline: thin solid #129FEA;
-    outline: 1px auto #129FEA;
+    outline: thin solid var(--blue-birds);
+    outline: 1px auto var(--blue-birds);
 }
 
 .pure-form .pure-checkbox,
@@ -906,8 +897,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form select[disabled],
 .pure-form textarea[disabled] {
     cursor: not-allowed;
-    background-color: #eaeded;
-    color: #cad2d3;
+    background-color: var(--white);
+    color: var(--white);
 }
 
 /*
@@ -916,41 +907,41 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type])[disabled] {
     cursor: not-allowed;
-    background-color: #eaeded;
-    color: #cad2d3;
+    background-color:var(--white);
+    color: var(--white);
 }
 
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
-    background-color: #eee; /* menu hover bg color */
-    color: #777; /* menu text color */
-    border-color: #ccc;
+    background-color:var(--white); /* menu hover bg color */
+    color: var(--dark-green); /* menu text color */
+    border-color: var(--white);
 }
 
 .pure-form input:focus:invalid,
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
-    color: #b94a48;
-    border-color: #e9322d;
+    color: var(--red);
+    border-color: var(--red);
 }
 
 .pure-form input[type="file"]:focus:invalid:focus,
 .pure-form input[type="radio"]:focus:invalid:focus,
 .pure-form input[type="checkbox"]:focus:invalid:focus {
-    outline-color: #e9322d;
+    outline-color: var(--red);
 }
 
 .pure-form select {
     /* Normalizes the height; padding is not sufficient. */
     height: 2.25em;
-    border: 1px solid #ccc;
-    background-color: white;
+    border: 1px solid var(--white);
+    background-color: var(--white);
 }
 
-    .pure-form select[multiple] {
-        height: auto;
-    }
+.pure-form select[multiple] {
+    height: auto;
+}
 
 .pure-form label {
     margin: 0.5em 0 0.2em;
@@ -968,7 +959,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0.3em 0;
     margin-bottom: 0.3em;
     color: var(--white);
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--white);
 }
 
 .pure-form-stacked input[type="text"],
@@ -1019,13 +1010,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     margin-bottom: 0.5em;
 }
 
-    .pure-form-aligned .pure-control-group label {
-        text-align: right;
-        display: inline-block;
-        vertical-align: middle;
-        width: 10em;
-        margin: 0 1em 0 0;
-    }
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
 
 .pure-form-aligned .pure-controls {
     margin: 1.5em 0 0 11em;
@@ -1053,31 +1044,31 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     top: -1px;
 }
 
-    .pure-form .pure-group input:focus,
-    .pure-form .pure-group textarea:focus {
-        z-index: 3;
-    }
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
+}
 
-    .pure-form .pure-group input:first-child,
-    .pure-form .pure-group textarea:first-child {
-        top: 1px;
-        border-radius: 4px 4px 0 0;
-        margin: 0;
-    }
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
 
-        .pure-form .pure-group input:first-child:last-child,
-        .pure-form .pure-group textarea:first-child:last-child {
-            top: 1px;
-            border-radius: 4px;
-            margin: 0;
-        }
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
 
-    .pure-form .pure-group input:last-child,
-    .pure-form .pure-group textarea:last-child {
-        top: -2px;
-        border-radius: 0 0 4px 4px;
-        margin: 0;
-    }
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
 
 .pure-form .pure-group button {
     margin: 0.35em 0;
@@ -1113,13 +1104,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding-left: 0.3em;
     color: #666;
     vertical-align: middle;
-    font-size: 0.875em;
-}
-
-/* Block help for forms */
-.pure-form-message {
-    display: block;
-    color: #666;
     font-size: 0.875em;
 }
 

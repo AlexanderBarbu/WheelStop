@@ -44,8 +44,9 @@
             <main class="container">
 
               <form class="pure-form pure-form-aligned" style="margin-left:10px;" id="formId" name="registerForm" method="post">
+                
                 <fieldset>
-                  <legend>Personal info:</legend>
+                  <legend>Personal info</legend>
                   <details>
                     <summary>Why is my info needed?</summary>
                     <p><em><small>Your personal info is necessary so our support can better assist you!</small></em></p>
@@ -57,9 +58,9 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <label for="addr">Address:</label>
-                    <input type="text" id="addr" name="addr">
+                    <input type="text" id="addr" name="addr"><br>
                     <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" value="2018-07-22" min="1910-01-01" max="2022-12-31"><br>
+                    <input type="date" id="dob" name="dob" value="2023-11-23" min="1910-01-01" max="2024-01-31">
                     <label for="countryCode">Country Code</label> & <label for="phone">Phone number:</label>
                     <input list ="countryCodes" name="countryCode" id="countryCode" style="width: 50px;" class="input-together" required>
                   <datalist id="countryCodes">
@@ -68,8 +69,9 @@
 
                   <input type="tel" id="phone" name="phone"  minlength="10" maxlength="10" pattern="[0-9]{10}" required><br><br>
                 </fieldset><br>
+
                 <fieldset>
-                  <legend>Account info:</legend>
+                  <legend>Account info</legend>
                   <details>
                     <summary>What should my password look like?</summary>
                     <p><em><small>Account info must be input twice for safety measures, password must be 8-12 characters long, with at least 1 lower-case, 1 upper-case and a special character!</small></em></p>
@@ -83,6 +85,7 @@
                   <label for="pass2">Re-enter password:</label>
                   <input type="password" id="pass2" name="pass2" minlength="8"><br><br>
                 </fieldset><br>
+
                 <fieldset>
                   <legend>Contact methods</legend>
                   <details>
@@ -98,55 +101,74 @@
                   <input type="checkbox" id="contactm4" name="contact" value="WhatsApp">
                   <label for="contactm4"> WhatsApp</label><br>
                 </fieldset><br>
+
                 <fieldset>
-                  <legend>Questionnaire:</legend>
+                  <legend>Questionnaire</legend>
                   <details>
                     <summary>Will my answers be shared?</summary>
                     <p><em><small>Your answers will not be shared. Answering the questionnaire can help personalize the offers you receive!</small></em></p>
                   </details>
                   <h3>What type of ads do you usually search for?</h3>
-                  <input type="radio" id="pc_parts" name="fav_buy" value="pc_parts">
-                  <label for="pc_parts">Cars for sale</label><br>
-                  <input type="radio" id="phones" name="fav_buy" value="phones">
-                  <label for="phones">Cars for rent</label><br>
-                  <input type="radio" id="tablets" name="fav_buy" value="tablets">
-                  <label for="tablets">Motorcycles for sale</label><br>
-                  <input type="radio" id="tablets" name="fav_buy" value="tablets">
-                  <label for="phones">Motorcycles for rent</label><br><br>
+                  <input type="radio" id="carsSale" name="fav_buy" value="carsSale">
+                  <label for="carsSale">Cars for sale</label><br>
+
+                  <input type="radio" id="CarsRent" name="fav_buy" value="CarsRent">
+                  <label for="CarsRent">Cars for rent</label><br>
+
+                  <input type="radio" id="MotoSale" name="fav_buy" value="MotoSale">
+                  <label for="MotoSale">Motorcycles for sale</label><br>
+
+                  <input type="radio" id="MotoRent" name="fav_buy" value="MotoRent">
+                  <label for="MotoRent">Motorcycles for rent</label><br><br>
+
                   <h3>What is your current job position, if employed??</h3>
                   <input type="radio" id="no1" name="offers" value="no">
                   <label for="no1">Employed</label><br>
-                  <input type="radio" id="neutral1" name="offers" value="neutral">
-                  <label for="neutral1">Freelancer</label><br>
-                  <input type="radio" id="yes1" name="offers" value="yes">
-                  <label for="yes1">Student</label><br>
-                  <input type="radio" id="yes1" name="offers" value="yes">
-                  <label for="yes1">Unemployed</label><br><br>
+
+                  <input type="radio" id="freeLancer" name="offers" value="freeLancer">
+                  <label for="freeLancer">Freelancer</label><br>
+
+                  <input type="radio" id="unemployed" name="offers" value="unemployed">
+                  <label for="unemployed">Student</label><br>
+                  <input type="radio" id="unemployed" name="offers" value="unemployed">
+                  <label for="unemployed">Unemployed</label><br><br>
+
                   <h3>In which areas would you like to live or engage in professional activities?</h3>
-                  <input type="radio" id="no2" name="support" value="no">
-                  <label for="no2">City</label><br>
-                  <input type="radio" id="neutral2" name="support" value="neutral">
-                  <label for="neutral2">Seaside area</label><br>
-                  <input type="radio" id="yes2" name="support" value="yes">
-                  <label for="yes2">Rural area</label><br>
-                  <input type="radio" id="yes2" name="support" value="yes">
-                  <label for="yes2">Central work locations</label><br><br>
+                  <input type="radio" id="city" name="support" value="city">
+                  <label for="city">City</label><br>
+
+                  <input type="radio" id="seaside" name="support" value="seaside">
+                  <label for="seaside">Seaside area</label><br>
+
+                  <input type="radio" id="rural" name="support" value="rural">
+                  <label for="rural">Rural area</label><br>
+
+                  <input type="radio" id="central" name="support" value="central">
+                  <label for="central">Central work locations</label><br><br>
+
                   <h3>What type of vehicles do you use on a daily basis?</h3>
-                  <input type="radio" id="no3" name="prices" value="no">
-                  <label for="no3">Car</label><br>
-                  <input type="radio" id="neutral3" name="prices" value="neutral">
-                  <label for="neutral3">Motorcycle</label><br>
-                  <input type="radio" id="yes3" name="prices" value="yes">
-                  <label for="yes3">Bicycle</label><br>
-                  <input type="radio" id="yes3" name="prices" value="yes">
-                  <label for="yes3">Electric scooter</label><br><br>
+                  <input type="radio" id="car" name="prices" value="car">
+                  <label for="car">Car</label><br>
+
+                  <input type="radio" id="moto" name="prices" value="moto">
+                  <label for="moto">Motorcycle</label><br>
+
+                  <input type="radio" id="bicycle" name="prices" value="bicycle">
+                  <label for="bicycle">Bicycle</label><br>
+
+                  <input type="radio" id="escooter" name="prices" value="escooter">
+                  <label for="escooter">Electric scooter</label><br><br>
+
                   <h3>Do you enjoy our website's layout?</h3>
-                  <input type="radio" id="no4" name="ui" value="no">
-                  <label for="no4">No</label><br>
-                  <input type="radio" id="neutral4" name="ui" value="neutral">
-                  <label for="neutral4">Neutral</label><br>
-                  <input type="radio" id="yes4" name="ui" value="yes">
-                  <label for="yes4">Yes</label><br><br>
+                  <input type="radio" id="no" name="ui" value="no">
+                  <label for="no">No</label><br>
+
+                  <input type="radio" id="neutral" name="ui" value="neutral">
+                  <label for="neutral">Neutral</label><br>
+
+                  <input type="radio" id="yes" name="ui" value="yes">
+                  <label for="yes">Yes</label><br><br>
+
                   <h4>Thank you for taking your time to help us improve our services!</h4>
                 </fieldset>
 
@@ -155,6 +177,7 @@
               </div>
 
               </form>
+              
             </main>
 
             <script src="js/form.js">
